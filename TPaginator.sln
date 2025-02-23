@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{04C14519-F218-4EFF-B609-E912923AB5BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{1B9FD36E-FA85-4B65-A325-96ED9BB365AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPaginator", "TPaginator\TPaginator.csproj", "{5D4D29CB-EC37-4455-8A3C-11F97CA40BCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaginatorTests", "PaginatorTests\PaginatorTests.csproj", "{D0EB906B-FC67-43F8-B9A5-A67FD9A0A721}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A00491B7-31E2-4FB7-94CA-9C9059777DFB}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D4D29CB-EC37-4455-8A3C-11F97CA40BCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D4D29CB-EC37-4455-8A3C-11F97CA40BCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D4D29CB-EC37-4455-8A3C-11F97CA40BCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D4D29CB-EC37-4455-8A3C-11F97CA40BCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0EB906B-FC67-43F8-B9A5-A67FD9A0A721}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0EB906B-FC67-43F8-B9A5-A67FD9A0A721}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0EB906B-FC67-43F8-B9A5-A67FD9A0A721}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0EB906B-FC67-43F8-B9A5-A67FD9A0A721}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5D4D29CB-EC37-4455-8A3C-11F97CA40BCE} = {04C14519-F218-4EFF-B609-E912923AB5BD}
+		{D0EB906B-FC67-43F8-B9A5-A67FD9A0A721} = {1B9FD36E-FA85-4B65-A325-96ED9BB365AC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {96069063-210D-4880-B87D-733F206C2F7C}
+	EndGlobalSection
+EndGlobal

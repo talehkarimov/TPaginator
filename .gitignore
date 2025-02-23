@@ -1,0 +1,16 @@
+# User-specific files
+.vs/
+.idea/
+.vscode/
+
+# Build directories
+bin/
+obj/
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+
+# Temporary files
+*.log
