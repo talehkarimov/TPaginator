@@ -15,9 +15,9 @@ To install `TPaginator`, run the following command in your NuGet Package Manager
 
 ```bash
 dotnet add package TPaginator
+```
 
 ## Usage
-
 ### Synchronous Pagination
 
 To paginate an `IEnumerable<T>` collection, use the `Paginate` method with a synchronous pagination strategy.
@@ -31,7 +31,7 @@ var paginator = new Paginator<int>(new DefaultPaginationStrategy<int>());
 
 // Paginate the collection
 var result = paginator.Paginate(source, page: 2, pageSize: 10);
-
+```
 ### Asynchronous Pagination
 
 // Create an IQueryable collection
