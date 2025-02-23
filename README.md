@@ -1,19 +1,44 @@
 # TPaginator
 
-TPaginator is a flexible, easy-to-use, and highly customizable pagination library for .NET, designed to simplify pagination logic in your applications. It supports both synchronous and asynchronous pagination strategies, allowing you to efficiently paginate large collections of data with minimal complexity.
+`TPaginator` is a simple, flexible pagination library for .NET, supporting both **synchronous** and **asynchronous** pagination strategies. It allows you to easily paginate collections of data with minimal complexity.
 
-This package provides two primary strategies for pagination:
+## Features
 
-Synchronous Pagination: For non-async data sources like IEnumerable<T>.
-Asynchronous Pagination: For async data sources like IQueryable<T>.
-Features
-Supports both synchronous and asynchronous pagination strategies.
-Generically typed for use with any collection of data (IEnumerable<T>, IQueryable<T>).
-Easy to integrate with any .NET application.
-Clean and minimalistic API to ensure the best developer experience.
-Fully unit-testable with mocks for strategies.
-Paginate based on page number and page size.
-Installation
-To install TPaginator, simply run the following command in your NuGet Package Manager console:
-  - dotnet add package TPaginator
-Alternatively, you can install it via the NuGet Package Manager in Visual Studio.
+- Supports both synchronous and asynchronous pagination strategies.
+- Works with **IEnumerable<T>** (sync) and **IQueryable<T>** (async).
+- Clean and minimalistic API.
+- Fully unit-testable with mocks for strategies.
+
+## Installation
+
+To install `TPaginator`, run the following command in your NuGet Package Manager console:
+
+```bash
+dotnet add package TPaginator
+
+## Usage
+
+### Synchronous Pagination
+
+To paginate an `IEnumerable<T>` collection, use the `Paginate` method with a synchronous pagination strategy.
+
+```csharp
+// Create a collection
+var source = Enumerable.Range(1, 100);
+
+// Initialize the paginator with a synchronous strategy
+var paginator = new Paginator<int>(new DefaultPaginationStrategy<int>());
+
+// Paginate the collection
+var result = paginator.Paginate(source, page: 2, pageSize: 10);
+
+### Asynchronous Pagination
+
+// Create an IQueryable collection
+var source = Enumerable.Range(1, 100).AsQueryable();
+
+// Initialize the paginator with an asynchronous strategy
+var paginator = new Paginator<int>(new DefaultAsyncPaginationStrategy<int>());
+
+// Paginate the collection asynchronously
+var result = await paginator.PaginateAsync(source, page: 2, pageSize: 10);
