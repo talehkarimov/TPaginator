@@ -33,7 +33,7 @@ var paginator = new Paginator<int>(new DefaultPaginationStrategy<int>());
 var result = paginator.Paginate(source, page: 2, pageSize: 10);
 ```
 ### Asynchronous Pagination
-
+```csharp
 // Create an IQueryable collection
 var source = Enumerable.Range(1, 100).AsQueryable();
 
@@ -42,3 +42,4 @@ var paginator = new Paginator<int>(new DefaultAsyncPaginationStrategy<int>());
 
 // Paginate the collection asynchronously
 var result = await paginator.PaginateAsync(source, page: 2, pageSize: 10);
+```
