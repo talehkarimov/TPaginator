@@ -9,8 +9,10 @@
 		<Description>A simple and flexible pagination library for .NET</Description>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<RepositoryUrl>https://github.com/talehkarimov/TPaginator</RepositoryUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
 	<ItemGroup>
 	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.2" />
+		<None Include="docs\README.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 </Project>
