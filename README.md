@@ -31,6 +31,22 @@ var paginator = new Paginator<int>(new DefaultPaginationStrategy<int>());
 
 // Paginate the collection
 var result = paginator.Paginate(source, page: 2, pageSize: 10);
+
+// Now, you can access these result properties:
+
+int totalPages = result.TotalPages;  // Total number of pages
+int currentPage = result.CurrentPage;  // The current page number
+int pageSize = result.PageSize;  // The number of items per page
+int totalItems = result.TotalItems;  // Total number of items in the collection
+var itemsOnPage = result.Items;  // The list of items for the current page
+
+// Example output:
+Console.WriteLine($"Total Pages: {totalPages}");
+Console.WriteLine($"Current Page: {currentPage}");
+Console.WriteLine($"Page Size: {pageSize}");
+Console.WriteLine($"Total Items: {totalItems}");
+Console.WriteLine($"Items on Page {currentPage}: {string.Join(", ", itemsOnPage)}");
+
 ```
 ### Asynchronous Pagination
 ```csharp
@@ -42,4 +58,20 @@ var paginator = new Paginator<int>(new DefaultAsyncPaginationStrategy<int>());
 
 // Paginate the collection asynchronously
 var result = await paginator.PaginateAsync(source, page: 2, pageSize: 10);
+
+// Now, you can access these result properties:
+
+int totalPages = result.TotalPages;  // Total number of pages
+int currentPage = result.CurrentPage;  // The current page number
+int pageSize = result.PageSize;  // The number of items per page
+int totalItems = result.TotalItems;  // Total number of items in the collection
+var itemsOnPage = result.Items;  // The list of items for the current page
+
+// Example output:
+Console.WriteLine($"Total Pages: {totalPages}");
+Console.WriteLine($"Current Page: {currentPage}");
+Console.WriteLine($"Page Size: {pageSize}");
+Console.WriteLine($"Total Items: {totalItems}");
+Console.WriteLine($"Items on Page {currentPage}: {string.Join(", ", itemsOnPage)}");
+
 ```
